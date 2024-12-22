@@ -1,3 +1,13 @@
+// aplicativo.
+const express = require("express");
+const app = express();
+const session = require("express-session");
+const flash = require("connect-flash");
+
+// corpo.
+const handlebars = require("express-handlebars");
+const bodyParser = require("body-parser");
+
 const http = require("http"); // Para criar o servidor
 const fs = require("fs"); // Para ler arquivos do sistema de arquivos
 const path = require("path"); // Para lidar com caminhos de arquivos
