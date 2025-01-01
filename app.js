@@ -12,44 +12,58 @@ const http = require("http"); // Para criar o servidor
 const fs = require("fs"); // Para ler arquivos do sistema de arquivos
 const path = require("path"); // Para lidar com caminhos de arquivos
 
-const port = 3002; // Porta do servidor
+// ---> Sessão.
+app.use(
+    session({
+        secret: "jhonatanMarcao",
+        resave: true,
+        saveUninitialized: true,
+    })
+);
+app.use(flash());
+// ---> Midleware.
+app.use((req, res, next) => {
+    // Variavel global.
+    res.locals.success_msg = req.flash("success_msg");
+    res.locals.error_msg = req.flash("error_msg");
+    next();
+});
+// ---> body parser.
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+// ---> handlebars.
+app.engine("handlebars", handlebars.engine());
+app.set("view engine", "handlebars");
 
-// Criar o servidor HTTP
-const server = http.createServer((req, res) => {
-    // Verifica se a URL é a raiz do site (localhost:3002)
-    if (req.url === "/") {
-        // Caminho para o arquivo index.html
-        const filePath = path.join(__dirname, "html", "index.html");
+// mongo
+// ---> mongoose.
+mongoose.Promise = global.Promise;
+mongoose
+    .connect(db.MongoURI)
+    .then(() => {
+        console.log(` SO=  ${process.platform}
+    Conectou com o Mongodb !!! 
+    URL = ${db.MongoURI}`);
+    })
+    .catch((erro) => {
+        console.log(
+            db.MongoURI,
+            "\n Não foi possivel conectar ao mongo, pois: " + erro
+        );
+    });
 
-        // Lê o arquivo HTML
-        fs.readFile(filePath, "utf-8", (err, data) => {
-            if (err) {
-                // Caso ocorra um erro ao ler o arquivo
-                res.statusCode = 500;
-                res.end("Erro ao ler o arquivo.");
-            } else {
-                // Caso o arquivo seja lido corretamente
-                res.statusCode = 200;
-                res.setHeader("Content-Type", "text/html");
-                res.end(data);
-            }
-        });
-    } else {
-        // Para qualquer outra URL, retorna um erro 404
-        res.statusCode = 404;
-        res.end("Página não encontrada");
-    }
+// rotas
+// ---> Public.
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/", function (req, res) {
+    res.render("index");
 });
 
-// Inicia o servidor na porta 3002
-try {
-    server.listen(port, () => {
-        console.log(`\nServidor rodando em http://localhost:${port}`);
-    });
-} catch (error) {
-    console.log(
-        `\nnão rodou em http://localhost:${port} \n
-    // pois\n`,
-        error
-    );
-}
+app.get("/form", function (req, res) {
+    res.render("html/form");
+});
+
+app.get("/conta", function (req, res) {
+    res.render("html/categorias");
+});

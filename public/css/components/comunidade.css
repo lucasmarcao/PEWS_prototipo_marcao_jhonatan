@@ -1,0 +1,164 @@
+.come-comunidade {
+  display: block;
+  position: relative;
+  width: 90%;
+  height: 700px;
+}
+
+/* MAIS LID0 AREA */
+.mais-lido {
+  position: absolute;
+  text-align: center !important;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  width: 23%;
+  height: 700px;
+}
+.imghqmaislido {
+  transition: 0.8s;
+  z-index: 0 !important;
+  width: 150px;
+  height: 220px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+/* ABA DISCUSSOES AREA */
+.aba-discussoes {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 380px;
+}
+.btncomentario {
+  margin: 10px 0;
+  font-size: 24px;
+  width: 100%;
+  padding: 5px 0;
+}
+.scrollcria {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.comecomentario {
+  margin: 5px 0;
+  position: relative;
+  width: 100%;
+  height: 160px;
+}
+.perfilfoto {
+  position: absolute;
+  z-index: 3;
+  top: 4px;
+  left: 4px;
+  width: 60px;
+  height: 60px;
+}
+.nomecomentarista {
+  position: absolute;
+  padding: 5px;
+  font-size: 22px;
+  z-index: 1;
+  text-align: center;
+  top: 4px;
+  left: 66px;
+  width: 85%;
+  height: 40px;
+}
+.comentariotxt {
+  position: absolute;
+  padding: 8px 10px;
+  text-align: justify;
+  overflow-x: auto;
+  overflow-y: auto;
+  top: 48px;
+  left: 66px;
+  width: 85%;
+  height: 104px;
+}
+
+/* MAIS NOTA AREA */
+.mais-nota {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 36%;
+  height: 300px;
+}
+.imghqnota {
+  transition: 0.8s;
+  z-index: 0 !important;
+  width: 130px;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.notatexto {
+  text-align: center;
+  padding: 5px;
+  width: 280px;
+  height: auto;
+}
+
+/* MAIS NOTA AREA */
+.menos-nota {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 36%;
+  height: 300px;
+}
+
+/* responsivo */
+@media (max-width: 991.98px) {
+  .come-comunidade {
+    margin: 10px 0;
+    width: 95%;
+    height: auto;
+  }
+
+  /* MAIS LID0 AREA */
+  .mais-lido {
+    margin: 10px 0;
+    position: inherit;
+    width: 100%;
+  }
+
+  /* ABA DISCUSSOES AREA */
+  .aba-discussoes {
+    margin: 10px 0;
+    position: inherit;
+    width: 100%;
+  }
+
+  .nomecomentarista {
+    width: 71%;
+    height: 40px;
+  }
+  .comentariotxt {
+    text-align: center;
+    width: 71%;
+    height: 105px;
+  }
+
+  /* MAIS NOTA AREA */
+  .mais-nota {
+    margin: 10px 0;
+    position: inherit !important;
+    left: inherit;
+    width: 100%;
+  }
+
+  /* MAIS NOTA AREA */
+  .menos-nota {
+    margin: 10px 0;
+    position: inherit;
+    width: 100%;
+  }
+}
