@@ -1,0 +1,32 @@
+Seguinte Nathan : 
+Voce vai digitar esses comando no seu terminal na ordem CERTA.
+
+terminal : escolhe o GitBash.
+
+primeiro de tudo : Vai no gitHub e cria um repositorio PUBLICO(tem q ser publico)
+com o nome de aprendendo_gitBash 
+(tem que ser esse nome pros comandos no git bash funcionar)
+
+guia: (copie e cole no terminal o que for um comando.)
+
+1-	echo "# aprendendo_gitBash" >> README.md
+
+2-	git init
+
+3-	git add README.md
+
+4- 	git commit -m "Primeiro Commit"
+
+5-	git branch -M main
+
+6-  git remote add origin https://github.com/(SUACONTA)/aprendendo_gitBash.git
+
+7-       git push -u origin main
+
+8-       git add .
+
+9-       git commit -am "main: manda pro git"
+
+10-     git push origin main
+
+11 -     git checkout -b SECAO-NATHAN-1

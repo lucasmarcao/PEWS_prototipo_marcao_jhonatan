@@ -1,0 +1,245 @@
+.main-recentes {
+  position: relative;
+  width: 90%;
+  height: 450px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.tendencia,
+.ultimascategorias,
+.ultimolancou {
+  height: 450px;
+  position: absolute;
+  top: 0;
+}
+
+.tendencia {
+  left: 0;
+  width: 22%;
+}
+
+.ultimascategorias {
+  left: 24.5%;
+  width: 51%;
+}
+
+.ultimolancou {
+  right: 0;
+  width: 22%;
+}
+
+/* baixo */
+
+.ultimasnoticias {
+  position: relative;
+  margin: 10px 0;
+  width: 90%;
+  height: 250px;
+}
+
+.titulonoticia {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 75px;
+  width: 30%;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 35px;
+}
+
+.lancadossemanal {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  height: 175px;
+  width: 30%;
+  text-align: center !important;
+  padding: 5px;
+  padding-top: 14px;
+}
+
+/* internos */
+.pn1,
+.pn3 {
+  text-align: center !important;
+}
+.scrollcria {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.fontepequena {
+  font-size: 14px;
+  font-weight: bold;
+}
+.row,
+.container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* categorias */
+.painelnovacategoria {
+  position: relative;
+  margin: 10px 0;
+  padding: 4px;
+  height: 100px;
+  width: 97%;
+}
+.classeicon {
+  padding: 2px;
+  margin-left: 6px;
+  margin-right: 6px;
+  width: 52px;
+  height: 52px;
+}
+.nomecategoria,
+.hqsnacategoria,
+.categoriafeitaem {
+  position: absolute;
+  top: 5px;
+  height: 90px;
+  text-align: center;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  font-size: 14px !important;
+  text-align: center !important;
+}
+.nomecategoria {
+  width: 35%;
+  left: 1%;
+}
+.hqsnacategoria {
+  width: 30%;
+  right: 32.5%;
+}
+.categoriafeitaem {
+  width: 30%;
+  right: 1%;
+}
+/* lancados semanais */
+.lancadoshq {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  height: 250px;
+  width: 70%;
+  padding: 5px;
+}
+.espacohqs {
+  margin: 0px;
+  margin-left: 7px;
+  margin-right: 5px;
+}
+.espacoletra {
+  text-align: center !important;
+  padding: 5px;
+}
+.blocohqsemanal {
+  width: 100%;
+  height: 230px;
+  margin: 8px 0;
+}
+
+/* imagem */
+.img-hq-chad {
+  z-index: 0 !important;
+  width: 92px;
+  height: 145px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+/* responsivo */
+@media (max-width: 991.98px) {
+  .main-recentes {
+    position: inherit;
+    width: 95%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tendencia {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .ultimascategorias {
+    position: relative;
+    left: inherit;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .ultimolancou {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* categorias */
+  .painelnovacategoria {
+    position: relative;
+    margin: 10px 0;
+    padding: 4px;
+    height: 170px;
+    width: 98%;
+  }
+
+  .nomecategoria,
+  .hqsnacategoria,
+  .categoriafeitaem {
+    position: absolute;
+    height: 75px;
+  }
+  .categoriafeitaem {
+    top: 5px;
+    width: 46.5%;
+    left: 1.5%;
+  }
+  .hqsnacategoria {
+    top: 5px;
+    width: 46.5%;
+    right: 1.5%;
+  }
+  .nomecategoria {
+    top: 85px;
+    width: 97%;
+    left: 1.5%;
+  }
+
+  /* semanais */
+  .ultimasnoticias {
+    width: 95%;
+    height: auto !important;
+  }
+  .lancadoshq {
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    right: inherit;
+    width: 100%;
+    height: auto;
+  }
+  .lancadossemanal {
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    right: inherit;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 45px;
+  }
+  .titulonoticia {
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    right: inherit;
+    width: 100%;
+  }
+}
