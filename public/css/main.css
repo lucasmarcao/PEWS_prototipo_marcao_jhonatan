@@ -1,20 +1,25 @@
-h1 {
-  margin-top: 55px !important;
-  margin-bottom: 20px !important;
-  text-align: center;
-  font-size: 50px !important;
-  font-weight: bolder;
-}
-main {
-  margin-top: 15px;
-  margin-bottom: 20px;
-  width: 90%;
-}
+/* global */
+
+/* navbar */
+
+/* main */
+
+/* aside */
+
+/* footer */
+
+/* modal - bruto */
+
+/* extras - bruto */
+
+/* COMENTARIOS */
+
+/* MAIS recentes :*/
+/*{ categoria recentes */
 
 /* responsivo */
 @media (max-width: 991.98px) {
-  h1 {
-    margin-top: 58px !important;
-    font-size: 36px !important;
-  }
+    /* navbar */
+
+    /* recentes */
 }

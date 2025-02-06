@@ -1,8 +1,25 @@
-.botao-modal {
-  text-transform: uppercase;
-  font-family: "Courier New" !important;
-  font-size: 18px;
-}
-#staticBackdropLabel{
-  font-size: 34px !important;
+/* global */
+
+/* navbar */
+
+/* main */
+
+/* aside */
+
+/* footer */
+
+/* modal - bruto */
+
+/* extras - bruto */
+
+/* COMENTARIOS */
+
+/* MAIS recentes :*/
+/*{ categoria recentes */
+
+/* responsivo */
+@media (max-width: 991.98px) {
+    /* navbar */
+
+    /* recentes */
 }
