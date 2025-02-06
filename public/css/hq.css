@@ -1,36 +1,25 @@
-.caixa-img-hentai {
-  transition: 1s;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 100%;
-  height: auto;
-}
+/* global */
 
-.asidehq {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 100%;
-}
+/* navbar */
 
-.main-hq {
-  margin-top: 15px;
-  margin-bottom: 20px;
-  width: 100%;
-}
-.texto-ksksk {
-  text-align: center !important;
-}
-/* hq */
-.img-hentai {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  width: 50% !important;
-  border: 1px solid #828282 !important;
-}
+/* main */
+
+/* aside */
+
+/* footer */
+
+/* modal - bruto */
+
+/* extras - bruto */
+
+/* COMENTARIOS */
+
+/* MAIS recentes :*/
+/*{ categoria recentes */
 
 /* responsivo */
 @media (max-width: 991.98px) {
-  .img-hentai {
-    width: 100% !important;
-  }
+    /* navbar */
+
+    /* recentes */
 }

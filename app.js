@@ -12,6 +12,9 @@ const http = require("http"); // Para criar o servidor
 const fs = require("fs"); // Para ler arquivos do sistema de arquivos
 const path = require("path"); // Para lidar com caminhos de arquivos
 
+// banco de dados.
+const admin = require("./routes/admin");
+
 // ---> Sessão.
 app.use(
     session({
@@ -37,20 +40,21 @@ app.set("view engine", "handlebars");
 
 // mongo
 // ---> mongoose.
-mongoose.Promise = global.Promise;
-mongoose
-    .connect(db.MongoURI)
-    .then(() => {
-        console.log(` SO=  ${process.platform}
-    Conectou com o Mongodb !!! 
-    URL = ${db.MongoURI}`);
-    })
-    .catch((erro) => {
-        console.log(
-            db.MongoURI,
-            "\n Não foi possivel conectar ao mongo, pois: " + erro
-        );
-    });
+
+// mongoose.Promise = global.Promise;
+// mongoose
+//     .connect(db.MongoURI)
+//     .then(() => {
+//         console.log(` SO=  ${process.platform}
+//     Conectou com o Mongodb !!!
+//     URL = ${db.MongoURI}`);
+//     })
+//     .catch((erro) => {
+//         console.log(
+//             db.MongoURI,
+//             "\n Não foi possivel conectar ao mongo, pois: " + erro
+//         );
+//     });
 
 // rotas
 // ---> Public.
@@ -64,6 +68,27 @@ app.get("/form", function (req, res) {
     res.render("html/form");
 });
 
-app.get("/conta", function (req, res) {
+app.get("/categorias", function (req, res) {
     res.render("html/categorias");
 });
+
+app.get("/teste", function (req, res) {
+    res.render("html/teste");
+});
+
+// adm esta on.
+app.use("/admin", admin);
+
+// Outros.
+const PORT = process.env.PORT || 8081;
+try {
+    app.listen(PORT, () => {
+        console.log(
+            "\n",
+            __dirname,
+            "\n Servidor rodando !!! para entrar, \n http://localhost:8081/ !!!"
+        );
+    });
+} catch (error) {
+    console.log("Servidor não rodou !!! , pois : ", error);
+}
