@@ -1,8 +1,63 @@
 /* global */
-img {
-    height: 30px !important;
+* {
+    font-family: "Courier New", Courier, monospace;
 }
 
+body {
+    background-color: #fff7d1 !important;
+}
+
+nav {
+    background-color: #ffd09b !important;
+}
+
+.margemFacil {
+    margin: 15px 0;
+}
+
+h4 {
+    margin: 10px 0 !important;
+    padding: 5px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 30px !important;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.centroTudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quadroOi {
+    padding: 5px;
+    width: 80%;
+    border: 1px solid black;
+    background-color: #ffb0b0;
+    margin: 10px 0;
+}
+
+.cabecaMain {
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    width: 80%;
+}
+
+.cardIndexG {
+    background-color: #ffecc8 !important;
+}
+
+.cardIndexI {
+    background-color: #ffb0b0 !important;
+}
+
+.cardIndexH {
+    background-color: #ffd09b !important;
+}
 /* navbar */
 
 /* main */
@@ -10,6 +65,14 @@ img {
 /* aside */
 
 /* footer */
+footer {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    background-color: #ffd09b;
+    padding-top: 10px;
+    text-align: center;
+}
 
 /* modal - bruto */
 
