@@ -64,8 +64,16 @@ app.get("/", function (req, res) {
     res.render("index");
 });
 
-app.get("/form", function (req, res) {
-    res.render("html/form");
+app.get("/avaliacao", function (req, res) {
+    res.render("html/avaliacao");
+});
+
+app.get("/questionario", function (req, res) {
+    res.render("html/questionario");
+});
+
+app.get("/cadastro", function (req, res) {
+    res.render("html/cadastro");
 });
 
 app.get("/categorias", function (req, res) {
@@ -74,6 +82,10 @@ app.get("/categorias", function (req, res) {
 
 app.get("/teste", function (req, res) {
     res.render("html/teste");
+});
+
+app.get("/form", function (req, res) {
+    res.render("html/form");
 });
 
 // adm esta on.
