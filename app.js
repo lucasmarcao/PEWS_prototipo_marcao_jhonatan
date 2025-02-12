@@ -60,6 +60,7 @@ app.set("view engine", "handlebars");
 // ---> Public.
 app.use(express.static(path.join(__dirname, "public")));
 
+// MINHAS URLS QUERIDAS
 app.get("/", function (req, res) {
     res.render("index");
 });
@@ -68,31 +69,46 @@ app.get("/avaliacao", function (req, res) {
     res.render("html/avaliacao");
 });
 
-app.get("/questionario", function (req, res) {
-    res.render("html/questionario");
+app.get("/avaliacao-parte-2", function (req, res) {
+    res.render("html/avaliacao-parte-2");
+});
+
+app.get("/relatorios", function (req, res) {
+    res.render("html/relatorios");
 });
 
 app.get("/cadastro", function (req, res) {
-    res.render("html/cadastro");
+    res.render("conta/cadastro");
 });
 
-app.get("/categorias", function (req, res) {
-    res.render("html/categorias");
+app.get("/login", function (req, res) {
+    res.render("conta/login");
 });
 
-app.get("/teste", function (req, res) {
-    res.render("html/teste");
+app.get("/configuracoes", function (req, res) {
+    res.render("conta/configuracoes");
 });
 
-app.get("/form", function (req, res) {
-    res.render("html/form");
+app.get("/como-usar", function (req, res) {
+    res.render("html/como-usar");
 });
 
+app.get("/contato", function (req, res) {
+    res.render("html/contato");
+});
+
+app.get("/404", (req, res) => {
+    res.render("html/erro");
+});
 // adm esta on.
 app.use("/admin", admin);
 
+// Middleware para capturar rotas inexistentes
+app.use((req, res) => {
+    res.status(404).render("html/erro", { mensagem: "Página não encontrada!" });
+});
 // Outros.
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 8085;
 try {
     app.listen(PORT, () => {
         console.log(
