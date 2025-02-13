@@ -114,7 +114,8 @@ try {
         console.log(
             "\n",
             __dirname,
-            "\n Servidor rodando !!! para entrar, \n http://localhost:8081/ !!!"
+            "\nServidor rodando !!! para entrar, \n\n http://localhost:8085/ !!!\n\n",
+            "padrão porta 8085, mas pode mudar se precisar ;) \n"
         );
     });
 } catch (error) {

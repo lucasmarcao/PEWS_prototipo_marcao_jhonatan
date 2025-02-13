@@ -33,8 +33,18 @@ h1 {
     justify-content: center;
 }
 
+.fonteGrande {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 36px;
+}
+
+.fonteGigante {
+    font-size: 66px;
+}
+
 .quadroOi {
-    padding: 5px;
+    padding: 12px;
     width: 80%;
     border: 1px solid black;
     background-color: #ffb0b0;
