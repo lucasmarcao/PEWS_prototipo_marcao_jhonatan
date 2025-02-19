@@ -73,6 +73,10 @@ app.get("/avaliacao-parte-2", function (req, res) {
     res.render("html/avaliacao-parte-2");
 });
 
+app.get("/avaliacao-parte-3", function (req, res) {
+    res.render("html/avaliacao-parte-3");
+});
+
 app.get("/relatorios", function (req, res) {
     res.render("html/relatorios");
 });

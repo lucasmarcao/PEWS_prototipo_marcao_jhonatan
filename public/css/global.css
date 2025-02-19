@@ -15,6 +15,10 @@ nav {
     margin: 15px 0;
 }
 
+.miniMargem {
+    margin: 15px 0;
+}
+
 h4 {
     margin: 10px 0 !important;
     padding: 5px;
@@ -92,6 +96,94 @@ footer {
 
 /* MAIS recentes :*/
 /*{ categoria recentes */
+
+/* th */
+
+.relatorioBusca {
+    border: #ffd09b 1px solid !important;
+    background-color: #ffd09b !important;
+    width: 100%;
+}
+.labelBuscaRelatorio {
+    margin-top: 10px;
+    background-color: #fff7d1 !important;
+}
+
+thead {
+    border: #ffd09b 1px solid !important;
+}
+
+tr {
+    border: #ffd09b 1px solid !important;
+}
+
+th {
+    text-align: center !important;
+    border: #ffb0b0 2px solid !important;
+    background-color: #ffecc8 !important;
+}
+
+td {
+    text-align: center;
+    border: #ffd09b 1px solid !important;
+}
+
+/* .paginacaoMargem */
+
+.paginacaoPai {
+    background-color: #ffecc8 !important;
+    border: #ffd09b ridge 6px !important;
+}
+
+.paginacaoFilho {
+    background-color: transparent !important;
+}
+
+.paginacaoMargem {
+    margin-top: 32px !important;
+}
+
+.page-link {
+    margin: 1px 5px;
+    background: #fff7d1 !important;
+    color: #b2c0e9;
+    padding: 12px 18px !important;
+    border: #ffb0b0 ridge 2px !important;
+}
+
+.ativoPaginacao {
+    padding: 10px 16px !important;
+    background-color: #ffd7aa !important;
+    border: #fff7d1 ridge 4px !important;
+}
+
+/* fundaoForms */
+
+.fundaoForms {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    background-color: #ffd7aa !important;
+    border: 2px solid #ffb0b0;
+}
+
+.formAvaliacoes {
+    width: 90% !important;
+}
+
+.checkSegunda {
+    margin-left: 4px !important;
+}
+
+.labelCheckPews::first-letter {
+    margin-left: 25px;
+}
+
+.checkPews {
+    padding: 6px;
+    border-radius: 5px;
+    background-color: #ffecc8;
+    border: #ffb0b0 solid 2px;
+}
 
 /* responsivo */
 @media (max-width: 991.98px) {
