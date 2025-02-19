@@ -1,3 +1,185 @@
-<h1>
-    Relatorios
-</h1>
+<div class="centroTudo margemFacil">
+    <div class="cabecaMain card-header cardIndexG margemFacil">
+        <h1 class="titulao fonteGigante">
+            Relatórios
+        </h1>
+        <h3>
+            lista dos pacientes
+        </h3>
+        <hr />
+        Com seus dados principais resumidos.
+    </div>
+</div>
+
+<hr />
+
+<br />
+
+<div class="container centroTudo margemFacil">
+    <div class="alert relatorioBusca" role="alert">
+        <form class="centroTudo">
+            <label
+                class="form-control mr-sm-2 labelBuscaRelatorio"
+                for="idPaciente"
+            >
+                Busque algum paciente por aqui :
+            </label>
+            <select
+                name="parametroPaciente"
+                id="parametroPaciente"
+                class="form-control mr-sm-2"
+                placeholder="uuuuu"
+                aria-label="uuuuu"
+            >
+                <option value="">Selecione Um parâmetro</option>
+                <option value="nome">Nome</option>
+                <option value="idade">Idade</option>
+                <option value="leito">Leito</option>
+
+            </select>
+            <input
+                name="idPaciente"
+                id="idPaciente"
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Pesquisar"
+                aria-label="Pesquisar"
+            />
+            <button class="btn btn-info my-2 my-sm-0" type="submit">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="container centroTudo margemFacil">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Número </th>
+                <th scope="col">Nome </th>
+                <th scope="col">Leito</th>
+                <th scope="col">DIH </th>
+                <th scope="col">Idade</th>
+                <th scope="col">Data da Avaliação
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Lucas Marcão</td>
+                <td>3</td>
+                <td>420 R$</td>
+                <td>19 anos</td>
+                <td> 11/08/2024 </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Lucas Marcão</td>
+                <td>3</td>
+                <td>420 R$</td>
+                <td>19 anos</td>
+                <td> 11/08/2024 </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Lucas Marcão</td>
+                <td>3</td>
+                <td>420 R$</td>
+                <td>19 anos</td>
+                <td> 11/08/2024 </td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Lucas Marcão</td>
+                <td>3</td>
+                <td>420 R$</td>
+                <td>19 anos</td>
+                <td> 11/08/2024 </td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Lucas Marcão</td>
+                <td>3</td>
+                <td>420 R$</td>
+                <td>19 anos</td>
+                <td> 11/08/2024 </td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Lucas Marcão</td>
+                <td>3</td>
+                <td>420 R$</td>
+                <td>19 anos</td>
+                <td> 11/08/2024 </td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td>Lucas Marcão</td>
+                <td>3</td>
+                <td>420 R$</td>
+                <td>19 anos</td>
+                <td> 11/08/2024 </td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td>Lucas Marcão</td>
+                <td>3</td>
+                <td>420 R$</td>
+                <td>19 anos</td>
+                <td> 11/08/2024 </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+
+    <nav aria-label="breadcrumb" class="centroTudo margemFacil paginacaoPai">
+        <nav
+            aria-label="Page navigation example"
+            class="margemFacil paginacaoMargem paginacaoFilho"
+        >
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item disabled"><a class="page-link" href="#">
+                        ...
+                    </a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a
+                        class="page-link ativoPaginacao"
+                        href="#"
+                    >5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#">
+                        ...
+                    </a></li>
+                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </nav>
+</div>
