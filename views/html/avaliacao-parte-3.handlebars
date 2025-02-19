@@ -1,7 +1,14 @@
 <link rel="stylesheet" href="/css/form.css" />
 <h1>
-    Terceira e ultima parte da avaliação.
+    Terceira parte da avaliação.
 </h1>
+
+<h3
+    style="padding-left: 50px; padding-right: 50px; text-align: center;
+    margin-top: 5px; margin-bottom: 15px;"
+>
+    Obtendo Estago geral do paciente. 50% concluido.
+</h3>
 
 <hr />
 
@@ -18,7 +25,7 @@
                         <div class="centroTudo">
                             <h4 style="padding-top: 20px !important;">
                                 <strong>
-                                    Nebulização de resgate em 15 minutos
+                                    Avaliação Cardio-vascular
                                 </strong>
                             </h4>
                         </div>
@@ -30,14 +37,14 @@
                                 type="radio"
                                 name="gridRadios"
                                 id="gridRadios1"
-                                value="0"
+                                value="option1"
                                 checked
                             />
                             <label
                                 class="form-check-label labelCheckPews"
                                 for="gridRadios1"
                             >
-                                Não | + 0
+                                Corado ou TEC 1-2 seg | + 0
                             </label>
                         </div>
                         <div class="form-check miniMargem checkPews">
@@ -46,13 +53,47 @@
                                 type="radio"
                                 name="gridRadios"
                                 id="gridRadios2"
-                                value="2"
+                                value="option2"
                             />
                             <label
                                 class="form-check-label labelCheckPews"
                                 for="gridRadios2"
                             >
-                                Sim | + 2
+                                Pálido ou TEC 3 seg ou FC acima do limite
+                                superior para a idade + 1
+                            </label>
+                        </div>
+                        <div class="form-check miniMargem checkPews">
+                            <input
+                                class="form-check-input checkSegunda"
+                                type="radio"
+                                name="gridRadios"
+                                id="gridRadios3"
+                                value="option3"
+                            />
+                            <label
+                                class="form-check-label labelCheckPews"
+                                for="gridRadios3"
+                            >
+                                Moteado ou TEC 4 seg ou FC ≥ 20 bpm acima do
+                                limite superior para a idade | + 2
+                            </label>
+                        </div>
+                        <div class="form-check miniMargem checkPews">
+                            <input
+                                class="form-check-input checkSegunda"
+                                type="radio"
+                                name="gridRadios"
+                                id="gridRadios4"
+                                value="option4"
+                            />
+                            <label
+                                class="form-check-label labelCheckPews"
+                                for="gridRadios4"
+                            >
+                                Acinzentado/cianótico ou TEC ≥ 5 seg ou FC ≥ 30
+                                bpm acima do limite superior para a idade ou
+                                bradicardia para a idade | + 3
                             </label>
                         </div>
                     </div>
@@ -67,8 +108,7 @@
                         <div class="centroTudo">
                             <h4 style="padding-top: 20px !important;">
                                 <strong>
-                                    Três (3) episódios ou mais de emese no
-                                    pós-operatório
+                                    Avaliação Respiratória
                                 </strong>
                             </h4>
                         </div>
@@ -78,50 +118,74 @@
                             <input
                                 class="form-check-input checkSegunda"
                                 type="radio"
-                                name="b"
-                                id="b1"
-                                value="0"
+                                name="gridRadios"
+                                id="gridRadios1"
+                                value="option1"
                                 checked
                             />
                             <label
                                 class="form-check-label labelCheckPews"
-                                for="b1"
+                                for="gridRadios1"
                             >
-                                Não | + 0
+                                FR normal para a idade, sem retração | + 0
                             </label>
                         </div>
                         <div class="form-check miniMargem checkPews">
                             <input
                                 class="form-check-input checkSegunda"
                                 type="radio"
-                                name="b"
-                                id="b2"
-                                value="2"
+                                name="gridRadios"
+                                id="gridRadios2"
+                                value="option2"
                             />
                             <label
                                 class="form-check-label labelCheckPews"
-                                for="b2"
+                                for="gridRadios2"
                             >
-                                Sim | + 2
+                                FR acima do limite superior para a idade, uso de
+                                musculatura acessória ou FiO2 ≥ 30% ou 4
+                                litros/min de O2 | + 1
+                            </label>
+                        </div>
+                        <div class="form-check miniMargem checkPews">
+                            <input
+                                class="form-check-input checkSegunda"
+                                type="radio"
+                                name="gridRadios"
+                                id="gridRadios3"
+                                value="option3"
+                            />
+                            <label
+                                class="form-check-label labelCheckPews"
+                                for="gridRadios3"
+                            >
+                                FR ≥ 20 rpm acima do limite superior para a
+                                idade, retrações subcostais, intercostais e de
+                                fúrcula ou FiO2 ≥ 40% ou 6 litros/min de O2 | +
+                                2
+                            </label>
+                        </div>
+                        <div class="form-check miniMargem checkPews">
+                            <input
+                                class="form-check-input checkSegunda"
+                                type="radio"
+                                name="gridRadios"
+                                id="gridRadios4"
+                                value="option4"
+                            />
+                            <label
+                                class="form-check-label labelCheckPews"
+                                for="gridRadios4"
+                            >
+                                Acinzentado/cianótico ou TEC ≥ 5 seg ou FC ≥ 30
+                                bpm acima do limite superior para a idade ou
+                                bradicardia para a idade | + 3
                             </label>
                         </div>
                     </div>
                 </fieldset>
+
                 <hr />
-
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 22px;">
-                        Comentário a mais.
-                    </label>
-                    <textarea
-                        class="form-control"
-                        id="exampleFormControlTextarea1"
-                        rows="3"
-                        placeholder="Alguma observação / opcional."
-                    ></textarea>
-                    <hr />
-                </div>
-
                 <div class="centroTudo">
                     <a href="/">
                         <button
@@ -132,22 +196,13 @@
                             Cancelar Avaliação.
                         </button>
                     </a>
-                    <a href="/relatorios/">
-                        <button
-                            type="button"
-                            class="btn btn-success"
-                            style="margin-right: 15px !important;"
-                        >
-                            Gerar Relatório.
-                        </button>
-                    </a>
-                    <a href="/relatorios/">
+                    <a href="/avaliacao-parte-4/">
                         {{! transformar em tipo subimt depois }}
-
-                        <button type="button" class="btn btn-info">
-                            Ver intervenções recomendadas.
+                        <button type="button" class="btn btn-primary">
+                            Próxima parte ->
                         </button>
                     </a>
+
                 </div>
             </form>
         </div>

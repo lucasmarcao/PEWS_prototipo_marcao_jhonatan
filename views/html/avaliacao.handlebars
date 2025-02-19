@@ -2,6 +2,15 @@
     Primeira parte da avaliação
 </h1>
 
+<br />
+<br />
+<h3
+    style="padding-left: 50px; padding-right: 50px; text-align: center;
+    margin-top: 5px; margin-bottom: 15px;"
+>
+    Obtendo informações do paciente. 0% concluido.
+</h3>
+
 <hr />
 
 <div class="container margemFacil fundaoForms">
@@ -9,121 +18,99 @@
         <div class="col-12 centroTudo">
 
             <form class="formAvaliacoes">
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 22px;">
-                        Frequência Cardíaca por minuto (BPM)
+                <div class="form-group form-row">
+                    <label
+                        for="exampleInputEmail1"
+                        class="labelPrimeiraAvaliacao col-md-6 margemFacil"
+                        style="font-size: 22px;"
+                    >
+                        Nome do paciente:
                     </label>
-
-                    <select id="inputState" class="form-control">
-                        <option value="1" selected> vigilia. </option>
-                        <option value="2">Sono. </option>
-                    </select>
                     <input
-                        type="number"
-                        class="form-control margemFacil"
+                        type="text"
+                        class="form-control margemFacil col-md-6"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
                         min="4"
                         required
                     />
-                    <small id="emailHelp" class="form-text text-muted">
-                        Algo entre 60 a 100 por minuto.
-                    </small>
-                    <hr />
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">
-                        Frequência Respiratória por minuto
+                <hr />
+
+                <div class="form-group form-row">
+                    <label
+                        for="leito"
+                        class="labelPrimeiraAvaliacao col-md-6 margemFacil"
+                        style="font-size: 22px;"
+                    >
+                        Leito:
                     </label>
                     <input
                         type="number"
-                        class="form-control"
-                        id="exampleInputPassword1"
+                        class="form-control margemFacil col-md-6"
+                        id="leito"
+                        aria-describedby="emailHelp"
+                        min="0"
                         required
                     />
-                    <small id="emailHelp" class="form-text text-muted">
-                        Algo entre 12 e 20 por minuto.
-                    </small>
-                    <hr />
                 </div>
-                <fieldset class="form-group row">
-                    <legend
-                        class="col-form-label col-sm-4 float-sm-left pt-0"
-                        style="font-size: 22px; text-align: center;"
+                <hr />
+
+                <div class="form-group form-row">
+                    <label
+                        for="idade"
+                        class="labelPrimeiraAvaliacao col-md-6 margemFacil"
+                        style="font-size: 22px;"
                     >
-                        <div class="centroTudo">
-                            <h4 style="padding-top: 30px !important;">
-                                <strong>
-                                    Avaliação Neurológica
-                                </strong>
-                            </h4>
-                        </div>
-                    </legend>
-                    <div class="col-sm-8">
-                        <div class="form-check miniMargem checkPews">
-                            <input
-                                class="form-check-input checkSegunda"
-                                type="radio"
-                                name="gridRadios"
-                                id="gridRadios1"
-                                value="option1"
-                                checked
-                            />
-                            <label
-                                class="form-check-label labelCheckPews"
-                                for="gridRadios1"
-                            >
-                                Ativo. | + 0
-                            </label>
-                        </div>
-                        <div class="form-check miniMargem checkPews">
-                            <input
-                                class="form-check-input checkSegunda"
-                                type="radio"
-                                name="gridRadios"
-                                id="gridRadios2"
-                                value="option2"
-                            />
-                            <label
-                                class="form-check-label labelCheckPews"
-                                for="gridRadios2"
-                            >
-                                Sonolento/hipoativo | + 1
-                            </label>
-                        </div>
-                        <div class="form-check miniMargem checkPews">
-                            <input
-                                class="form-check-input checkSegunda"
-                                type="radio"
-                                name="gridRadios"
-                                id="gridRadios3"
-                                value="option3"
-                            />
-                            <label
-                                class="form-check-label labelCheckPews"
-                                for="gridRadios3"
-                            >
-                                Irritado | + 2
-                            </label>
-                        </div>
-                        <div class="form-check miniMargem checkPews">
-                            <input
-                                class="form-check-input checkSegunda"
-                                type="radio"
-                                name="gridRadios"
-                                id="gridRadios4"
-                                value="option4"
-                            />
-                            <label
-                                class="form-check-label labelCheckPews"
-                                for="gridRadios4"
-                            >
-                                Letárgico/obinubilado ou resposta reduzida à dor
-                                | + 3
-                            </label>
-                        </div>
-                    </div>
-                </fieldset>
+                        Idade do paciente:
+                    </label>
+                    <input
+                        type="number"
+                        class="form-control margemFacil col-md-6"
+                        id="idade"
+                        aria-describedby="emailHelp"
+                        min="0"
+                        required
+                    />
+                </div>
+                <hr />
+
+                <div class="form-group form-row">
+                    <label
+                        for="pr"
+                        class="labelPrimeiraAvaliacao col-md-6 margemFacil"
+                        style="font-size: 22px;"
+                    >
+                        DIH (preço serviço em R$)
+                    </label>
+                    <input
+                        type="number"
+                        class="form-control margemFacil col-md-6"
+                        id="pr"
+                        aria-describedby="emailHelp"
+                        min="0"
+                        required
+                    />
+                </div>
+                <hr />
+
+                <div class="form-group form-row">
+                    <label
+                        for="dt"
+                        class="labelPrimeiraAvaliacao col-md-6 margemFacil"
+                        style="font-size: 22px;"
+                    >
+                        Data da inicial da Consulta.
+                    </label>
+                    <input
+                        type="date"
+                        class="form-control margemFacil col-md-6"
+                        id="dt"
+                        aria-describedby="emailHelp"
+                        min="0"
+                        required
+                    />
+                </div>
                 <hr />
 
                 <div class="centroTudo">
