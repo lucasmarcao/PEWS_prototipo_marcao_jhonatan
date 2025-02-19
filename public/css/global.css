@@ -178,6 +178,11 @@ td {
     margin-left: 25px;
 }
 
+.labelPrimeiraAvaliacao {
+    margin-top: 16px;
+    text-align: center;
+}
+
 .checkPews {
     padding: 6px;
     border-radius: 5px;

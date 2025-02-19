@@ -1,12 +1,13 @@
+<link rel="stylesheet" href="/css/form.css" />
 <h1>
-    Segunda parte da avaliação
+    Quarta e ultima parte da avaliação.
 </h1>
 
 <h3
     style="padding-left: 50px; padding-right: 50px; text-align: center;
     margin-top: 5px; margin-bottom: 15px;"
 >
-    Obtendo Frequências do paciente. 25% concluido.
+    Finalizando o Relatório do paciente. 75% concluido.
 </h3>
 
 <hr />
@@ -16,52 +17,15 @@
         <div class="col-12 centroTudo">
 
             <form class="formAvaliacoes">
-                <div class="form-group">
-                    <label for="exampleInputEmail1" style="font-size: 22px;">
-                        Frequência Cardíaca por minuto (BPM)
-                    </label>
-
-                    <select id="inputState" class="form-control">
-                        <option value="1" selected> vigilia. </option>
-                        <option value="2">Sono. </option>
-                    </select>
-                    <input
-                        type="number"
-                        class="form-control margemFacil"
-                        id="exampleInputEmail1"
-                        aria-describedby="emailHelp"
-                        min="4"
-                        required
-                    />
-                    <small id="emailHelp" class="form-text text-muted">
-                        Algo entre 60 a 100 por minuto.
-                    </small>
-                    <hr />
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">
-                        Frequência Respiratória por minuto
-                    </label>
-                    <input
-                        type="number"
-                        class="form-control"
-                        id="exampleInputPassword1"
-                        required
-                    />
-                    <small id="emailHelp" class="form-text text-muted">
-                        Algo entre 12 e 20 por minuto.
-                    </small>
-                    <hr />
-                </div>
                 <fieldset class="form-group row">
                     <legend
                         class="col-form-label col-sm-4 float-sm-left pt-0"
                         style="font-size: 22px; text-align: center;"
                     >
                         <div class="centroTudo">
-                            <h4 style="padding-top: 30px !important;">
+                            <h4 style="padding-top: 20px !important;">
                                 <strong>
-                                    Avaliação Neurológica
+                                    Nebulização de resgate em 15 minutos
                                 </strong>
                             </h4>
                         </div>
@@ -73,14 +37,14 @@
                                 type="radio"
                                 name="gridRadios"
                                 id="gridRadios1"
-                                value="option1"
+                                value="0"
                                 checked
                             />
                             <label
                                 class="form-check-label labelCheckPews"
                                 for="gridRadios1"
                             >
-                                Ativo. | + 0
+                                Não | + 0
                             </label>
                         </div>
                         <div class="form-check miniMargem checkPews">
@@ -89,49 +53,81 @@
                                 type="radio"
                                 name="gridRadios"
                                 id="gridRadios2"
-                                value="option2"
+                                value="2"
                             />
                             <label
                                 class="form-check-label labelCheckPews"
                                 for="gridRadios2"
                             >
-                                Sonolento/hipoativo | + 1
-                            </label>
-                        </div>
-                        <div class="form-check miniMargem checkPews">
-                            <input
-                                class="form-check-input checkSegunda"
-                                type="radio"
-                                name="gridRadios"
-                                id="gridRadios3"
-                                value="option3"
-                            />
-                            <label
-                                class="form-check-label labelCheckPews"
-                                for="gridRadios3"
-                            >
-                                Irritado | + 2
-                            </label>
-                        </div>
-                        <div class="form-check miniMargem checkPews">
-                            <input
-                                class="form-check-input checkSegunda"
-                                type="radio"
-                                name="gridRadios"
-                                id="gridRadios4"
-                                value="option4"
-                            />
-                            <label
-                                class="form-check-label labelCheckPews"
-                                for="gridRadios4"
-                            >
-                                Letárgico/obinubilado ou resposta reduzida à dor
-                                | + 3
+                                Sim | + 2
                             </label>
                         </div>
                     </div>
                 </fieldset>
                 <hr />
+
+                <fieldset class="form-group row">
+                    <legend
+                        class="col-form-label col-sm-4 float-sm-left pt-0"
+                        style="font-size: 22px; text-align: center;"
+                    >
+                        <div class="centroTudo">
+                            <h4 style="padding-top: 20px !important;">
+                                <strong>
+                                    Três (3) episódios ou mais de emese no
+                                    pós-operatório
+                                </strong>
+                            </h4>
+                        </div>
+                    </legend>
+                    <div class="col-sm-8">
+                        <div class="form-check miniMargem checkPews">
+                            <input
+                                class="form-check-input checkSegunda"
+                                type="radio"
+                                name="b"
+                                id="b1"
+                                value="0"
+                                checked
+                            />
+                            <label
+                                class="form-check-label labelCheckPews"
+                                for="b1"
+                            >
+                                Não | + 0
+                            </label>
+                        </div>
+                        <div class="form-check miniMargem checkPews">
+                            <input
+                                class="form-check-input checkSegunda"
+                                type="radio"
+                                name="b"
+                                id="b2"
+                                value="2"
+                            />
+                            <label
+                                class="form-check-label labelCheckPews"
+                                for="b2"
+                            >
+                                Sim | + 2
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <hr />
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1" style="font-size: 22px;">
+                        Comentário a mais.
+                    </label>
+                    <textarea
+                        class="form-control"
+                        id="exampleFormControlTextarea1"
+                        rows="3"
+                        placeholder="Alguma observação / opcional."
+                    ></textarea>
+                    <hr />
+                </div>
 
                 <div class="centroTudo">
                     <a href="/">
@@ -143,14 +139,22 @@
                             Cancelar Avaliação.
                         </button>
                     </a>
-                    <a href="/avaliacao-parte-3/">
-                        {{! transformar em tipo subimt depois }}
-                        <button type="button" class="btn btn-primary">
-                            Próxima parte ->
+                    <a href="/relatorio-paciente/">
+                        <button
+                            type="button"
+                            class="btn btn-success"
+                            style="margin-right: 15px !important;"
+                        >
+                            Gerar Relatório.
                         </button>
-
                     </a>
+                    <a href="/relatorios/">
+                        {{! transformar em tipo subimt depois }}
 
+                        <button type="button" class="btn btn-info">
+                            Ver intervenções recomendadas.
+                        </button>
+                    </a>
                 </div>
             </form>
         </div>
