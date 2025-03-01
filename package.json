@@ -1,29 +1,37 @@
 {
-    "name": "pews_prototipo_marcao_jhonatan",
-    "version": "1.0.0",
-    "description": "",
-    "main": "app.js",
-    "devDependencies": {},
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node app.js"
-    },
-    "keywords": [
-        "node",
-        "glitch"
-    ],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "body-parser": "^1.20.3",
-        "connect-flash": "^0.1.1",
-        "express": "^4.21.2",
-        "express-handlebars": "^8.0.1",
-        "express-session": "^1.18.1",
-        "mongoose": "^8.9.1",
-        "multer": "^1.4.5-lts.1"
-    },
-    "engines": {
-        "node": ">=14.0.0"
-    }
+  "name": "PEWS_prototipo_marcao_jhonatan",
+  "version": "1.0.0",
+  "description": "Eu não tanko mais isso.",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.9.1",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "node",
+    "glitch"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasmarcao/PEWS_prototipo_marcao_jhonatan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasmarcao/PEWS_prototipo_marcao_jhonatan/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "homepage": "https://github.com/lucasmarcao/PEWS_prototipo_marcao_jhonatan#readme"
 }
