@@ -1,6 +1,6 @@
 /* global */
 * {
-    font-family: "Courier New", Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -185,9 +185,40 @@ td {
 
 .checkPews {
     padding: 6px;
-    border-radius: 5px;
+    border-radius: 6px;
     background-color: #ffecc8;
     border: #ffb0b0 solid 2px;
+}
+
+.quadrado1 {
+    height: 430px;
+    width: 100%;
+    border: 3px solid #ffd7aa;
+    background-color: #ffb0b0;
+}
+
+.imgQuadrado {
+    margin: 30px;
+    width: 250px;
+}
+
+.quadrado2 {
+    height: 430px;
+    width: 100%;
+    border: 1px solid #ffd09b;
+    background-color: #ffd09b;
+}
+.ladobtn {
+    margin-right: 10px;
+}
+.coisoDados {
+    text-align: center;
+    width: 95%;
+}
+
+.cor2 {
+    text-align: center;
+    background-color: #ffd09b !important;
 }
 
 /* responsivo */

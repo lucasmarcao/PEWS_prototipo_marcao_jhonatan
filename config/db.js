@@ -6,5 +6,5 @@
 // }
 
 module.exports = {
-    MongoURI: "mongodb://localhost/pews_prototipo_marcao_jhonatan",
+    MongoURI: `mongodb+srv://renato38:enquebravel1@cluster0.7vpir.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
 };

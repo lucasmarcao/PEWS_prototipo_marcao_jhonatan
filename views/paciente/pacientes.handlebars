@@ -1,0 +1,60 @@
+<style>
+    .centro { display: flex; align-items: center; justify-content: center; }
+    .editar { margin: 5px; } .excluir { margin: 10px 5px; }
+</style>
+
+<h2 class="centroTudo margemFacil"> Lista de paciente.</h2>
+<hr />
+<a class="centroTudo margemFacil" href="/avaliacao">
+    <button class="btn btn-success"> Novo paciente</button>
+</a>
+<hr />
+<div class="container margemFacil">
+    <div class="row">
+        {{#each paciente}}
+            <div class="col-12 mt-3">
+                <div class="card margemFacil cor2">
+                    <div class="card-body">
+                        <h3>Nome do paciente: {{nome}}</h3>
+                        <hr />
+                        <h5>ID do paciente: {{_id}}</h5>
+                        <h5> leito: <strong>{{leito}}</strong></h5>
+                        <br />
+                        <h4> dataNascimento: { {{dataNascimento}} }.</h4>
+                        <h5> preco da consulta : {{preco}} R$.</h5>
+                        <h5>
+                            dataConsulta :
+                            <br />
+                            {{dataConsulta}}
+                        </h5>
+                        <hr />
+                        <div class="centro">
+                            <a href="/avaliacao/?{{_id}}">
+                                <button class="btn btn-warning editar">Editar
+                                    paciente</button>
+                            </a>
+                            <form
+                                action="/paciente/excluir"
+                                method="post"
+                                class="excluir"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="id"
+                                    value="{{_id}}"
+                                />
+                                <button class="btn btn-danger">Excluir paciente</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="card">
+                <div class="card-body">
+                    Não foi Cadastrado nenhum paciente no momento.
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
