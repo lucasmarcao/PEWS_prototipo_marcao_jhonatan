@@ -17,10 +17,15 @@
     <div class="row">
         <div class="col-12 centroTudo">
 
-            <form class="formAvaliacoes">
+            <form
+                class="formAvaliacoes"
+                action="/paciente/nova"
+                method="post"
+                autocomplete="off"
+            >
                 <div class="form-group form-row">
                     <label
-                        for="exampleInputEmail1"
+                        for="nome"
                         class="labelPrimeiraAvaliacao col-md-6 margemFacil"
                         style="font-size: 22px;"
                     >
@@ -29,9 +34,10 @@
                     <input
                         type="text"
                         class="form-control margemFacil col-md-6"
-                        id="exampleInputEmail1"
+                        name="nome"
+                        id="nome"
                         aria-describedby="emailHelp"
-                        min="4"
+                        minlength="3"
                         required
                     />
                 </div>
@@ -48,6 +54,7 @@
                     <input
                         type="number"
                         class="form-control margemFacil col-md-6"
+                        name="leito"
                         id="leito"
                         aria-describedby="emailHelp"
                         min="0"
@@ -58,18 +65,17 @@
 
                 <div class="form-group form-row">
                     <label
-                        for="idade"
+                        for="dataNascimento"
                         class="labelPrimeiraAvaliacao col-md-6 margemFacil"
                         style="font-size: 22px;"
                     >
-                        Idade do paciente:
+                        data de Nascimento:
                     </label>
                     <input
-                        type="number"
+                        type="date"
                         class="form-control margemFacil col-md-6"
-                        id="idade"
-                        aria-describedby="emailHelp"
-                        min="0"
+                        name="dataNascimento"
+                        id="dataNascimento"
                         required
                     />
                 </div>
@@ -77,7 +83,7 @@
 
                 <div class="form-group form-row">
                     <label
-                        for="pr"
+                        for="preco"
                         class="labelPrimeiraAvaliacao col-md-6 margemFacil"
                         style="font-size: 22px;"
                     >
@@ -86,7 +92,8 @@
                     <input
                         type="number"
                         class="form-control margemFacil col-md-6"
-                        id="pr"
+                        id="preco"
+                        name="preco"
                         aria-describedby="emailHelp"
                         min="0"
                         required
@@ -96,7 +103,7 @@
 
                 <div class="form-group form-row">
                     <label
-                        for="dt"
+                        for="dataConsulta"
                         class="labelPrimeiraAvaliacao col-md-6 margemFacil"
                         style="font-size: 22px;"
                     >
@@ -105,7 +112,8 @@
                     <input
                         type="date"
                         class="form-control margemFacil col-md-6"
-                        id="dt"
+                        id="dataConsulta"
+                        name="dataConsulta"
                         aria-describedby="emailHelp"
                         min="0"
                         required
@@ -125,7 +133,7 @@
                     </a>
                     <a href="/avaliacao-parte-2/">
                         {{! transformar em tipo subimt depois }}
-                        <button type="button" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary">
                             Próxima parte ->
                         </button>
 

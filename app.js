@@ -8,12 +8,18 @@ const flash = require("connect-flash");
 const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
 
-const http = require("http"); // Para criar o servidor
-const fs = require("fs"); // Para ler arquivos do sistema de arquivos
 const path = require("path"); // Para lidar com caminhos de arquivos
 
 // banco de dados.
-const admin = require("./routes/admin");
+// const admin = require("./routes/admin");
+
+// para se conectar, é so escrever {mongod} no cmd.
+const mongoose = require("mongoose");
+require("./models/Paciente");
+const Paciente = mongoose.model("paciente");
+require("./models/Formula");
+const Formula = mongoose.model("formula");
+const db = require("./config/db");
 
 // ---> Sessão.
 app.use(
@@ -41,20 +47,20 @@ app.set("view engine", "handlebars");
 // mongo
 // ---> mongoose.
 
-// mongoose.Promise = global.Promise;
-// mongoose
-//     .connect(db.MongoURI)
-//     .then(() => {
-//         console.log(` SO=  ${process.platform}
-//     Conectou com o Mongodb !!!
-//     URL = ${db.MongoURI}`);
-//     })
-//     .catch((erro) => {
-//         console.log(
-//             db.MongoURI,
-//             "\n Não foi possivel conectar ao mongo, pois: " + erro
-//         );
-//     });
+mongoose.Promise = global.Promise;
+mongoose
+    .connect(db.MongoURI)
+    .then(() => {
+        console.log(` SO=  ${process.platform}
+    Conectou com o Mongodb !!!
+    URL = ${db.MongoURI}`);
+    })
+    .catch((erro) => {
+        console.log(
+            db.MongoURI,
+            "\n Não foi possivel conectar ao mongo, pois: " + erro
+        );
+    });
 
 // rotas
 // ---> Public.
@@ -85,10 +91,6 @@ app.get("/relatorio-paciente", function (req, res) {
     res.render("html/relatorio-paciente");
 });
 
-app.get("/relatorios", function (req, res) {
-    res.render("html/relatorios");
-});
-
 app.get("/cadastro", function (req, res) {
     res.render("conta/cadastro");
 });
@@ -109,11 +111,66 @@ app.get("/contato", function (req, res) {
     res.render("html/contato");
 });
 
+// PARTE COM BD
+app.get("/paciente", (req, res) => {
+    Paciente.find()
+        .lean()
+        .sort({ dataConsulta: "desc" })
+        .then((paciente) => {
+            res.render("paciente/pacientes", { paciente: paciente });
+        })
+        .catch((err) => {
+            res.redirect("/");
+        });
+});
+
+app.get("/relatorios", function (req, res) {
+    Paciente.find()
+        .lean()
+        .sort({ dataConsulta: "desc" })
+        .then((paciente) => {
+            res.render("html/relatorios", { paciente: paciente });
+        })
+        .catch((err) => {
+            res.redirect("/");
+        });
+});
+
+app.post("/paciente/nova", (req, res) => {
+    const novoPaciente = {
+        nome: req.body.nome,
+        leito: req.body.leito,
+        dataNascimento: req.body.dataNascimento,
+        preco: req.body.preco,
+        dataConsulta: req.body.dataConsulta,
+    };
+
+    new Paciente(novoPaciente)
+        .save()
+        .then(() => {
+            res.redirect("/avaliacao-parte-2");
+        })
+        .catch(() => {
+            res.redirect("/");
+        });
+});
+
+app.post("/paciente/excluir", (req, res) => {
+    Paciente.deleteOne({ _id: req.body.id })
+        .then(() => {
+            res.redirect("/paciente");
+        })
+        .catch((err) => {
+            res.redirect(`/?${err}`);
+        });
+});
+
+// 404 404
 app.get("/404", (req, res) => {
     res.render("html/erro");
 });
 // adm esta on.
-app.use("/admin", admin);
+// app.use("/admin", admin);
 
 // Middleware para capturar rotas inexistentes
 app.use((req, res) => {

@@ -67,11 +67,11 @@
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th scope="col">Número </th>
+                <th scope="col">Indentificador</th>
                 <th scope="col">Nome </th>
                 <th scope="col">Leito</th>
                 <th scope="col">DIH </th>
-                <th scope="col">Idade</th>
+                <th scope="col">Data de Nascimento</th>
                 <th scope="col">Data da Avaliação
                 </th>
             </tr>
@@ -114,43 +114,37 @@
                 <td> 11/08/2024 </td>
             </tr>
             <tr>
-                <th scope="row">5</th>
+                <th scope="row">4</th>
                 <td>Lucas Marcão</td>
                 <td>3</td>
                 <td>420 R$</td>
                 <td>19 anos</td>
                 <td> 11/08/2024 </td>
             </tr>
-            <tr>
-                <th scope="row">6</th>
-                <td>Lucas Marcão</td>
-                <td>3</td>
-                <td>420 R$</td>
-                <td>19 anos</td>
-                <td> 11/08/2024 </td>
-            </tr>
-            <tr>
-                <th scope="row">7</th>
-                <td>Lucas Marcão</td>
-                <td>3</td>
-                <td>420 R$</td>
-                <td>19 anos</td>
-                <td> 11/08/2024 </td>
-            </tr>
-            <tr>
-                <th scope="row">8</th>
-                <td>Lucas Marcão</td>
-                <td>3</td>
-                <td>420 R$</td>
-                <td>19 anos</td>
-                <td> 11/08/2024 </td>
-            </tr>
+            {{#each paciente}}
+                <tr>
+                    <th scope="row">{{_id}}</th>
+                    <td>{{nome}}</td>
+                    <td>{{leito}}</td>
+                    <td>{{preco}} R$</td>
+                    <td>{{dataNascimento}}</td>
+                    <td>{{dataConsulta}}</td>
+                </tr>
+            {{else}}
+                <tr>
+                    <th scope="row">-999</th>
+                    <td>Nenhum paciente no BD</td>
+                    <td>0</td>
+                    <td>-15 R$</td>
+                    <td>-999 anos</td>
+                    <td> 01/01/0001 </td>
+                </tr>
+            {{/each}}
         </tbody>
     </table>
 </div>
 
 <div class="container">
-
     <nav aria-label="breadcrumb" class="centroTudo margemFacil paginacaoPai">
         <nav
             aria-label="Page navigation example"
